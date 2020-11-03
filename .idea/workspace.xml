@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="637eb40a-2e0c-42bb-a307-6b64e2b61823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="637eb40a-2e0c-42bb-a307-6b64e2b61823" name="Default Changelist" comment="First iteration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SearchProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SearchProduct.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,37 +64,42 @@
       <option name="presentableId" value="Default" />
       <updated>1604226680895</updated>
       <workItem from="1604226682959" duration="14256000" />
-      <workItem from="1604243619171" duration="2458000" />
+      <workItem from="1604243619171" duration="3327000" />
+      <workItem from="1604247698927" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First iteration" />
+    <option name="LAST_COMMIT_MESSAGE" value="First iteration" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="804" y="262" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604227398031">
+    <state x="804" y="262" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604247277923">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="804" y="262" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604227398031" />
+    <state x="804" y="262" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604247277923" />
     <state x="540" y="28" key="CommitChangelistDialog2" timestamp="1604246162682">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="28" key="CommitChangelistDialog2/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604246162682" />
-    <state width="1899" height="261" key="GridCell.Tab.0.bottom" timestamp="1604246162739">
+    <state width="1899" height="261" key="GridCell.Tab.0.bottom" timestamp="1604247339679">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="261" key="GridCell.Tab.0.bottom/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604246162739" />
-    <state width="1899" height="261" key="GridCell.Tab.0.center" timestamp="1604246162739">
+    <state width="1899" height="261" key="GridCell.Tab.0.bottom/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604247339679" />
+    <state width="1899" height="261" key="GridCell.Tab.0.center" timestamp="1604247339679">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="261" key="GridCell.Tab.0.center/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604246162739" />
-    <state width="1899" height="261" key="GridCell.Tab.0.left" timestamp="1604246162738">
+    <state width="1899" height="261" key="GridCell.Tab.0.center/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604247339679" />
+    <state width="1899" height="261" key="GridCell.Tab.0.left" timestamp="1604247339679">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="261" key="GridCell.Tab.0.left/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604246162738" />
-    <state width="1899" height="261" key="GridCell.Tab.0.right" timestamp="1604246162739">
+    <state width="1899" height="261" key="GridCell.Tab.0.left/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604247339679" />
+    <state width="1899" height="261" key="GridCell.Tab.0.right" timestamp="1604247339679">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="261" key="GridCell.Tab.0.right/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604246162739" />
+    <state width="1899" height="261" key="GridCell.Tab.0.right/1920.30.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604247339679" />
   </component>
 </project>

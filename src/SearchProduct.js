@@ -13,11 +13,16 @@ export const SearchProducts = () => {
     const apiId = "245e8e76"
 
     async function handleClick() {
-        const r = await fetch('https://api.edamam.com/api/food-database/v2/parser?nutrition-type=logging&ingr=' + productToSearch + '&nutrition-type&app_id=' + apiId + '&app_key=' + apiKey, {
-            method: 'GET',
-            mode: 'cors',
-            cache: 'no-cache',
-        })
+        await fetch('https://api.edamam.com/api/food-database/v2/parser?nutrition-type=logging&ingr='
+            + productToSearch
+            + '&nutrition-type&app_id='
+            + apiId + '&app_key='
+            + apiKey,
+            {
+                method: 'GET',
+                mode: 'cors',
+                cache: 'no-cache',
+            })
             .then(response => response)
             .then(data => data.json())
             .then(res => setProducts(res.hints))
@@ -35,38 +40,38 @@ export const SearchProducts = () => {
             <input onChange={handleSearchInput} type="text" placeholder="Search product"/>
 
             <table className='table table-bordered table-striped table-dark table-hover'>
-            <thead>
-            <tr>
-                <td>#</td>
-                <td>Image</td>
-                <td>Name</td>
-                <td>Category</td>
-                <td>Energy</td>
-                <td>Protein</td>
-                <td>Fat</td>
-                <td>Carbs</td>
-                <td>Fiber</td>
-            </tr>
-            </thead>
-            <tbody>
-            {
-                (products.map(e => {
-                    return (
-                        <tr>
-                            <td>{products.indexOf(e) +1 }</td>
-                            <td><img src={e.food.image} alt="Image unavailable"/></td>
-                            <td>{e.food.label}</td>
-                            <td>{e.food.category}</td>
-                            <td>{Number(e.food.nutrients.ENERC_KCAL).toFixed(2) + "kcal"}</td>
-                            <td>{Number(e.food.nutrients.PROCNT).toFixed(2) + "g"}</td>
-                            <td>{Number(e.food.nutrients.FAT).toFixed(2) + "g"}</td>
-                            <td>{Number(e.food.nutrients.CHOCDF).toFixed(2) + "g"}</td>
-                            <td>{Number(e.food.nutrients.FIBTG).toFixed(2) + "g"}</td>
-                        </tr>
-                    )
-                }))
-            }
-            </tbody>
+                <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Image</td>
+                    <td>Name</td>
+                    <td>Category</td>
+                    <td>Energy</td>
+                    <td>Protein</td>
+                    <td>Fat</td>
+                    <td>Carbs</td>
+                    <td>Fiber</td>
+                </tr>
+                </thead>
+                <tbody>
+                {
+                    (products.map(e => {
+                        return (
+                            <tr>
+                                <td>{products.indexOf(e) + 1}</td>
+                                <td><img src={e.food.image} alt="Image unavailable"/></td>
+                                <td>{e.food.label}</td>
+                                <td>{e.food.category}</td>
+                                <td>{Number(e.food.nutrients.ENERC_KCAL).toFixed(2) + "kcal"}</td>
+                                <td>{Number(e.food.nutrients.PROCNT).toFixed(2) + "g"}</td>
+                                <td>{Number(e.food.nutrients.FAT).toFixed(2) + "g"}</td>
+                                <td>{Number(e.food.nutrients.CHOCDF).toFixed(2) + "g"}</td>
+                                <td>{Number(e.food.nutrients.FIBTG).toFixed(2) + "g"}</td>
+                            </tr>
+                        )
+                    }))
+                }
+                </tbody>
             </table>
         </>
     )
