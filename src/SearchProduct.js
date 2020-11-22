@@ -1,8 +1,16 @@
-import React, {useState} from "react"
+import React, {useContext, useState} from "react"
+import {ChosenProductsContext} from "./ChosenProductsContext";
+import {ChosenProducts} from "./ChosenProducts";
+import {NavigationContext} from "./NavigationContext";
 
-export const SearchProducts = () => {
+export const SearchProducts = (props) => {
     const [products, setProducts] = useState([]);
     const [productToSearch, setProductToSearch] = useState('');
+
+    //Próba na kontekście
+    // const chosenProductsContext = useContext(ChosenProductsContext);
+    // const {dispatch} = chosenProductsContext;
+
     // const appId = 'cfef4933';
     // const appKey = 'a32c1e439168e2c756f068d94eaad535';
 
@@ -10,9 +18,10 @@ export const SearchProducts = () => {
     // const clientId = '4681c4efc44e450da1fdfaa2eafc789c'
 
     const apiKey = "525672c7ebe3fe181f83ddfd5a5206f9";
-    const apiId = "245e8e76"
+    const apiId = "245e8e76";
 
     async function handleClick() {
+        if (productToSearch !== ""){
         await fetch('https://api.edamam.com/api/food-database/v2/parser?nutrition-type=logging&ingr='
             + productToSearch
             + '&nutrition-type&app_id='
@@ -25,11 +34,15 @@ export const SearchProducts = () => {
             })
             .then(response => response)
             .then(data => data.json())
-            .then(res => setProducts(res.hints))
+            .then(res => setProducts(res.hints))}
     }
 
     const handleSearchInput = (e) => {
         setProductToSearch(e.target.value)
+    };
+
+    const addProductToParent = (product) => {
+      props.addChosenProductCallback(product);
     };
 
     return (
@@ -43,7 +56,7 @@ export const SearchProducts = () => {
                 <thead>
                 <tr>
                     <td>#</td>
-                    <td>Image</td>
+                    {/*<td>Image</td>*/}
                     <td>Name</td>
                     <td>Category</td>
                     <td>Energy</td>
@@ -59,7 +72,7 @@ export const SearchProducts = () => {
                         return (
                             <tr>
                                 <td>{products.indexOf(e) + 1}</td>
-                                <td><img src={e.food.image} alt="Image unavailable"/></td>
+                                {/*<td><img src={e.food.image} alt="Image unavailable"/></td>*/}
                                 <td>{e.food.label}</td>
                                 <td>{e.food.category}</td>
                                 <td>{Number(e.food.nutrients.ENERC_KCAL).toFixed(2) + "kcal"}</td>
@@ -67,6 +80,7 @@ export const SearchProducts = () => {
                                 <td>{Number(e.food.nutrients.FAT).toFixed(2) + "g"}</td>
                                 <td>{Number(e.food.nutrients.CHOCDF).toFixed(2) + "g"}</td>
                                 <td>{Number(e.food.nutrients.FIBTG).toFixed(2) + "g"}</td>
+                                <td onClick={() => addProductToParent(e.food)}>Add product</td>
                             </tr>
                         )
                     }))
