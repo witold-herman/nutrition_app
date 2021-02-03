@@ -12,21 +12,16 @@ export const Navigation = () => {
         })
     };
 
-    const showDemandNav = () => {
+    const showDayListNav = () => {
         dispatch ({
-            type: "setShowDemand"
+            type: "setShowDayList"
         })
     };
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-
-
-            <a className="navbar-brand text-uppercase ml-4 text-white" href="#">Day list</a>
-            <a className="navbar-brand text-uppercase ml-4 text-white" onClick={showDemandNav} href="#">Demand</a>
-            <a className="navbar-brand text-uppercase ml-4 text-white" href="#">Macronutrients</a>
+        <nav className="navbar text-center navbar-expand-lg navbar-light bg-dark sticky-top">
+            <a className="navbar-brand text-uppercase ml-4 text-white" href="#" onClick={showDayListNav}>Day list</a>
             <a className="navbar-brand text-uppercase ml-4 text-white" onClick={showProductsNav} href="#">Products</a>
-
         </nav>
     )
 };

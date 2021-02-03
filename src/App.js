@@ -1,18 +1,24 @@
-import React from "react";
-import {SearchProducts} from "./SearchProduct";
+import React, {useState} from "react";
 import {Navigation} from "./Navigation";
 import {ChosenProducts} from "./ChosenProducts";
-import {CaloricDemand} from "./CaloricDemand";
+import "./styles.css"
+import {DayList} from "./DayList";
+
 
 export const App = () => {
+    const [dayAdded, setDayAdded] = useState(false);
 
-  return (
-      <>
-      <Navigation/>
-      <ChosenProducts/>
-      <CaloricDemand/>
-      </>
-  )
+    const dayAddedParentCallback = demandChanged => {
+        setDayAdded(demandChanged);
+    };
+
+    return (
+        <>
+            <Navigation/>
+            <ChosenProducts dayAddedCallback = {dayAddedParentCallback}/>
+            <DayList dayAdded={dayAdded}/>
+        </>
+    )
 };
 
 
